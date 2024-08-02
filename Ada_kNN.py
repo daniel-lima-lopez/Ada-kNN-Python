@@ -57,7 +57,7 @@ class Ada_kNN:
 
         self.r1, self.c1 = self.X_train.shape # number of instances and atributes of X_train
         self.k_max = int(np.ceil(np.sqrt(self.r1))) # k max value
-        print(f'k_max: {self.k_max}')
+        #print(f'k_max: {self.k_max}')
 
         # identification of the best suited values of k for classifing every xi in X_train
         self.Kxs = []
@@ -79,11 +79,11 @@ class Ada_kNN:
             
             # posible case when no value in permutation perfroms a succesfull clasification
             if j == self.k_max:
-                print(f'{xi} EMPTY')
+                #print(f'{xi} EMPTY')
                 Kxi = list(Krand)
             #print(f'Kxi: {Kxi}')
             self.Kxs.append(Kxi)
-        print(f'Kxs: {self.Kxs}')
+        #print(f'Kxs: {self.Kxs}')
 
         # set of k values used for training the MLP
         k_train = []
@@ -95,7 +95,7 @@ class Ada_kNN:
                 k_train.append(Kxi[auxi])
         k_train = np.array(k_train)
         k_train = k_train-1 # set into the range 0 to k_max-1 to traning
-        print(f'k_train: {k_train}')
+        #print(f'k_train: {k_train}')
 
         # definition of MLP
         input = tf.keras.layers.Input((self.c1,))
@@ -113,7 +113,7 @@ class Ada_kNN:
         )
 
         # training
-        self.MLP.fit(self.X_train, k_train, batch_size=self.batch_size, epochs=self.epochs)
+        self.MLP.fit(self.X_train, k_train, batch_size=self.batch_size, epochs=self.epochs, verbose=0)
     
     def get_kNN(self, k, xi):
         distances = self.Dmatrix[xi, 0:self.r1] # distances between xi and all the points on X_train
@@ -134,13 +134,13 @@ class Ada_kNN:
         #k_test - np.reshape(k_test, (len(X_test),))
         k_test = np.squeeze(k_test)
         k_test = np.rint(k_test) + 1. # add 1 to fit the real k values
-        print(f'k_test: {k_test}')
+        #print(f'k_test: {k_test}')
 
         # calcualte the distances betwen X_train and X_test
         dist = self.metric.metric_ab(X_test, self.X_train)
         auxD = self.Dmatrix
         self.Dmatrix = np.concatenate([self.Dmatrix, dist], axis=0)
-        print(f'Dmatrix: {self.Dmatrix}')
+        #print(f'Dmatrix: {self.Dmatrix}')
 
         # perform clasification of X_test
         preds = [] # predictions
