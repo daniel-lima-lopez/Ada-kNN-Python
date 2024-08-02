@@ -56,9 +56,9 @@ print(f'accuracy: {accuracy_score(y_true=y_test, y_pred=preds)}')
 ## Experiments
 Experiments were conducted to compare the performance of Ada-kNN with kNN. On each experiment, a 10-fold cross-validation was performed. For kNN, the `k` values considered are 1, 3, 5, 7, and 9. The accuracy on datasets appendicitis, balance-scale, bandas, climate, music and spectf are presented on the following figures:
 
-<img src="imgs/ks_appendicitis.png" alt="drawing" width="300"/>
-<img src="imgs/ks_balance-scale.png" alt="drawing" width="300"/>
-<img src="imgs/ks_bands.png" alt="drawing" width="300"/>
-<img src="imgs/ks_climate.png" alt="drawing" width="300"/>
-<img src="imgs/ks_music.png" alt="drawing" width="300"/>
-<img src="imgs/ks_spectf.png" alt="drawing" width="300"/>
+<img src="imgs/ks_appendicitis.png" alt="drawing" width="500"/>
+<img src="imgs/ks_balance-scale.png" alt="drawing" width="500"/>
+<img src="imgs/ks_bands.png" alt="drawing" width="500"/>
+<img src="imgs/ks_climate.png" alt="drawing" width="500"/>
+<img src="imgs/ks_music.png" alt="drawing" width="500"/>
+<img src="imgs/ks_spectf.png" alt="drawing" width="500"/>
