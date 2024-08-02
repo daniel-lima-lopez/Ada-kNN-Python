@@ -37,13 +37,12 @@ class Euclidean:
 
 
 class Ada_kNN:
-    def __init__(self, alpha=10, lr=0.01, momentum=0.9, batch_size=4, epochs=100): # 01
+    def __init__(self, alpha=10, lr=0.01, batch_size=4, epochs=100): # 01
         self.metric = Euclidean() # distance metric
         self.alpha = alpha # number of points considered in the experiments for K_xi
 
         # hyperparameters for MLP training
         self.lr = lr
-        self.momentum = momentum
         self.batch_size = batch_size
         self.epochs = epochs
     

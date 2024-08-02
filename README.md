@@ -12,11 +12,11 @@ The operation of Ada-kNN is described bellow:
 ## Instalation
 Clone this repository:
 ```bash
-git clone ...
+git clone git@github.com:daniel-lima-lopez/Ada-kNN-Python.git
 ```
 move to instalation directory:
 ```bash
-cd ...
+cd Ada-kNN-Python
 ```
 
 ## Basic usage
@@ -27,9 +27,9 @@ classifier = ada.Ada_kNN()
 ```
 However, the training parameters can be modified:
 - `alpha`: number of experiments consdiered on $X_{test}$
-- `lr`: learning rate for MLP traning
-- `batch_size`: batch size for MLP traning
-- `epochs`: number of epochs for MLP traning
+- `lr` (0.01): learning rate for MLP traning
+- `batch_size` (4): batch size for MLP traning
+- `epochs` (100): number of epochs for MLP traning
 
 Once instantiated the classifier, we can perform a simple test:
 ```python
@@ -54,4 +54,11 @@ print(f'accuracy: {accuracy_score(y_true=y_test, y_pred=preds)}')
 ```
 
 ## Experiments
-Experiments were conducted to compare the performance of Ada-kNN with kNN. On each experiment, a 10-fold cross-validation was performed. For kNN, the `k` values considered are 1, 3, 5, 7, and 9. The accuracy on datasets ... are presented on the following figures:
+Experiments were conducted to compare the performance of Ada-kNN with kNN. On each experiment, a 10-fold cross-validation was performed. For kNN, the `k` values considered are 1, 3, 5, 7, and 9. The accuracy on datasets appendicitis, balance-scale, bandas, climate, music and spectf are presented on the following figures:
+
+<img src="imgs/ks_appendicitis.png" alt="drawing" width="300"/>
+<img src="imgs/ks_balance-scale.png" alt="drawing" width="300"/>
+<img src="imgs/ks_bands.png" alt="drawing" width="300"/>
+<img src="imgs/ks_climate.png" alt="drawing" width="300"/>
+<img src="imgs/ks_music.png" alt="drawing" width="300"/>
+<img src="imgs/ks_spectf.png" alt="drawing" width="300"/>
