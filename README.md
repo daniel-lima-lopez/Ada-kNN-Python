@@ -1,6 +1,5 @@
 # Ada-kNN-Python
-This is a python implementation of the Ada-kNN classifier, proposed by Mullick et al.
-
+This is a python implementation of the Ada-kNN classifier, proposed by [Mullick et al.](https://ieeexplore.ieee.org/abstract/document/8326728)
 ## Classifier description
 The classifier is an extension of kNN, in which a strategy based on Multi-layer perceptron (MLP) is proposed to automate the choice of the parameter k, for each instance to be classified.
 
