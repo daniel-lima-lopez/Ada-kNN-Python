@@ -13,7 +13,7 @@ Clone this repository:
 ```bash
 git clone git@github.com:daniel-lima-lopez/Ada-kNN-Python.git
 ```
-move to instalation directory:
+move to installation directory:
 ```bash
 cd Ada-kNN-Python
 ```
