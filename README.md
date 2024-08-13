@@ -8,7 +8,7 @@ The operation of Ada-kNN is described bellow:
 - With this information, a MLP architecture is trained to predict the most appropriate $k$ value for classifying a given instance based on their attribute values.
 - Once the neural network has been trained, for each instance to be classified, the most appropriate value of $k$ is predicted with this network, then a conventional kNN classifier performs a prediction with this value.
 
-## Instalation
+## Installation
 Clone this repository:
 ```bash
 git clone git@github.com:daniel-lima-lopez/Ada-kNN-Python.git
